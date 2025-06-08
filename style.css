@@ -159,37 +159,53 @@ section {
     background-color: var(--surface-color);
 }
 
-.portfolio-card {
-    background-color: #2a2a2a;
-    padding: 40px;
-    border-radius: var(--border-radius);
-    text-align: center;
+.portfolio-card-minimalist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 700px;
-    margin: 0 auto;
-    border: 1px solid #444;
-}
-
-.portfolio-card i {
-    color: #ff0000; /* Warna YouTube */
-    font-size: 3.5rem;
-    margin-bottom: 20px;
-}
-
-.portfolio-card a {
-    display: inline-block;
-    background-color: #ff0000;
-    color: #ffffff;
-    padding: 12px 25px;
-    border-radius: 50px;
+    margin: 40px auto 0 auto;
+    padding: 25px 30px;
+    background-color: transparent;
+    border: 1px solid #333; /* Border yang sangat halus */
+    border-radius: var(--border-radius);
     text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 20px;
+    color: inherit;
+    transition: all 0.3s ease;
 }
 
-.portfolio-card a:hover {
-    background-color: #c00;
-    transform: scale(1.05);
+.portfolio-card-minimalist:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color); /* Border menyala saat disentuh */
+    background-color: rgba(3, 218, 198, 0.05); /* Sedikit cahaya dari warna utama */
+}
+
+.portfolio-content h3 {
+    margin-bottom: 5px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.portfolio-content p {
+    color: var(--text-secondary-color);
+    margin: 0;
+}
+
+.portfolio-card-minimalist:hover .portfolio-content h3 {
+    color: var(--primary-color); /* Judul berubah warna saat disentuh */
+}
+
+.cta-arrow {
+    font-size: 1.5rem;
+    color: var(--text-secondary-color);
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.portfolio-card-minimalist:hover .cta-arrow {
+    opacity: 1;
+    color: var(--primary-color);
+    transform: translateX(5px); /* Panah bergerak sedikit ke kanan */
 }
 
 /* --- Bagian Profil --- */
