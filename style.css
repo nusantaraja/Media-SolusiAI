@@ -316,70 +316,75 @@ footer {
     overflow-x: clip; /* Alternatif modern & lebih aman dari 'hidden' */
     }
 
-    /* --- Bagian Presentasi --- */
-/* ================================================== */
-/* BAGIAN PRESENTASI - VERSI BARU (UKURAN OPTIMAL) */
+    /* ================================================== */
+/* BAGIAN PRESENTASI - KODE CSS FINAL & TERBAIK */
 /* ================================================== */
 
 #presentasi {
     background-color: var(--bg-color);
-    padding-top: 60px;
+    padding: 60px 0 80px 0; /* Menambah padding bawah */
 }
 
+/* --- Memperbaiki Paragraf Deskripsi Menjadi Rata Tengah --- */
 #presentasi p {
-    text-align: center;
+    text-align: center; /* <<< INI DIA PERBAIKAN UNTUK PARAGRAF */
     max-width: 800px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 60px auto; /* Menambah jarak bawah ke presentasi */
     color: var(--text-secondary-color);
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
 .presentations-container {
     display: flex;
-    /* Mengubah layout menjadi vertikal agar setiap item mendapat ruang penuh */
-    flex-direction: column; 
-    align-items: center; /* Memusatkan item di tengah */
-    gap: 60px; /* Jarak yang lebih besar antar presentasi */
+    flex-direction: column;
+    align-items: center;
+    gap: 70px; /* Jarak antar presentasi */
 }
 
 .presentation-item {
     width: 100%;
-    max-width: 800px; 
-    text-align: center; /* <<< UBAH DARI 'left' MENJADI 'center' */
+    max-width: 900px; /* Lebar maksimal SANGAT BESAR agar jelas */
+    text-align: center; /* Judul 'Untuk Pialang/RS' menjadi rata tengah */
 }
 
 .presentation-item h3 {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
     color: var(--primary-color);
-    font-weight: 600;
 }
 
 .presentation-embed {
     width: 100%;
-    /* MENGGANTI trik rasio dengan tinggi tetap agar mudah dibaca */
-    height: 525px; 
-    border: 1px solid #333;
+    /* TINGGI BESAR untuk desktop agar sangat mudah dibaca */
+    height: 550px; 
+    border: 1px solid #444;
     border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 .presentation-embed iframe {
-    /* Menghapus position:absolute karena tidak lagi menggunakan trik rasio */
     width: 100%;
     height: 100%;
     border: none;
 }
 
 /* Penyesuaian untuk layar yang lebih kecil (mobile) */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .presentation-embed {
-        /* Mengurangi tinggi di mobile agar tidak terlalu memakan layar */
-        height: 450px; 
+        height: 450px;
     }
 }
-@media (max-width: 480px) {
+
+@media (max-width: 600px) {
     .presentation-embed {
-        height: 300px;
+        height: 350px;
     }
 }
+@media (max-width: 400px) {
+    .presentation-embed {
+        height: 250px;
+    }
+    }
 }
