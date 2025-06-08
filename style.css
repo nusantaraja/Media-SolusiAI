@@ -1,0 +1,117 @@
+/* Reset CSS dan Pengaturan Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212; /* Warna latar belakang gelap */
+    color: #f4f4f4; /* Warna teks terang */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Kontainer Utama */
+.container {
+    max-width: 680px;
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Foto Profil */
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    border: 3px solid #007BFF; /* Border dengan warna aksen biru */
+    object-fit: cover;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.4);
+}
+
+/* Judul Utama */
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Tagline */
+.tagline {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #b3b3b3; /* Warna abu-abu terang */
+    margin-bottom: 40px;
+}
+
+/* Kontainer untuk Tombol Tautan */
+.links-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar tombol */
+}
+
+/* Tombol Tautan */
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1e1e1e; /* Warna tombol sedikit lebih terang */
+    color: #f4f4f4;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.link-button i {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    width: 20px; /* Memberi lebar tetap agar teks sejajar */
+    text-align: left;
+}
+
+/* Efek Hover pada Tombol */
+.link-button:hover {
+    transform: translateY(-3px) scale(1.02);
+    background-color: #2a2a2a;
+    border-color: #007BFF;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Media Query untuk Perangkat Mobile */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+
+    .profile-picture {
+        width: 120px;
+        height: 120px;
+    }
+}
