@@ -282,6 +282,7 @@ footer {
     /* --- Tombol WhatsApp Mengambang --- */
     .whatsapp-float {
         position: fixed;
+        display: flex !important; /* Tambahkan ini */
         width: 60px;
         height: 60px;
         bottom: 30px;
