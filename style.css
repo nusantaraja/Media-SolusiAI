@@ -316,8 +316,8 @@ footer {
     overflow-x: clip; /* Alternatif modern & lebih aman dari 'hidden' */
     }
 
-    /* ================================================== */
-/* BAGIAN PRESENTASI - KODE CSS FINAL (UKURAN BESAR) */
+/* ================================================== */
+/* BAGIAN PRESENTASI - KODE CSS FINAL (DENGAN PEMAKSAAN) */
 /* ================================================== */
 
 #presentasi {
@@ -325,11 +325,11 @@ footer {
     padding: 60px 0 80px 0;
 }
 
-/* === SOLUSI UNTUK PARAGRAF RATA TENGAH === */
-#presentasi p {
-    text-align: center; /* MEMBUAT PARAGRAF RATA TENGAH */
+/* --- SOLUSI RATA TENGAH UNTUK PARAGRAF --- */
+#presentasi .container > p {
+    text-align: center !important; /* MEMAKSA RATA TENGAH */
     max-width: 800px;
-    margin: 0 auto 60px auto;
+    margin: 0 auto 60px auto !important;
     color: var(--text-secondary-color);
     font-size: 1.1rem;
     line-height: 1.7;
@@ -344,9 +344,9 @@ footer {
 
 .presentation-item {
     width: 100%;
-    /* === SOLUSI LEBAR MAKSIMAL AGAR TIDAK MINI === */
     max-width: 900px;
-    text-align: center;
+    /* --- SOLUSI RATA TENGAH UNTUK JUDUL --- */
+    text-align: center !important; /* MEMAKSA RATA TENGAH */
 }
 
 .presentation-item h3 {
@@ -357,8 +357,8 @@ footer {
 
 .presentation-embed {
     width: 100%;
-    /* === SOLUSI TINGGI BESAR AGAR TIDAK MINI === */
-    height: 550px; 
+    /* --- SOLUSI UKURAN BESAR AGAR TIDAK MINI --- */
+    height: 550px !important; /* MEMAKSA TINGGI */
     border: 1px solid #444;
     border-radius: var(--border-radius);
     overflow: hidden;
@@ -371,15 +371,15 @@ footer {
     border: none;
 }
 
-/* Penyesuaian untuk layar mobile agar tetap proporsional */
+/* Penyesuaian untuk layar yang lebih kecil (mobile) */
 @media (max-width: 900px) {
     .presentation-embed {
-        height: 450px;
+        height: 450px !important;
     }
 }
 @media (max-width: 600px) {
     .presentation-embed {
-        height: 350px;
+        height: 350px !important;
     }
 }
 }
