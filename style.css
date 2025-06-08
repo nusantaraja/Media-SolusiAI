@@ -317,19 +317,19 @@ footer {
     }
 
     /* ================================================== */
-/* BAGIAN PRESENTASI - KODE CSS FINAL & TERBAIK */
+/* BAGIAN PRESENTASI - KODE CSS FINAL (UKURAN BESAR) */
 /* ================================================== */
 
 #presentasi {
     background-color: var(--bg-color);
-    padding: 60px 0 80px 0; /* Menambah padding bawah */
+    padding: 60px 0 80px 0;
 }
 
-/* --- Memperbaiki Paragraf Deskripsi Menjadi Rata Tengah --- */
+/* === SOLUSI UNTUK PARAGRAF RATA TENGAH === */
 #presentasi p {
-    text-align: center; /* <<< INI DIA PERBAIKAN UNTUK PARAGRAF */
+    text-align: center; /* MEMBUAT PARAGRAF RATA TENGAH */
     max-width: 800px;
-    margin: 0 auto 60px auto; /* Menambah jarak bawah ke presentasi */
+    margin: 0 auto 60px auto;
     color: var(--text-secondary-color);
     font-size: 1.1rem;
     line-height: 1.7;
@@ -339,13 +339,14 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 70px; /* Jarak antar presentasi */
+    gap: 70px;
 }
 
 .presentation-item {
     width: 100%;
-    max-width: 900px; /* Lebar maksimal SANGAT BESAR agar jelas */
-    text-align: center; /* Judul 'Untuk Pialang/RS' menjadi rata tengah */
+    /* === SOLUSI LEBAR MAKSIMAL AGAR TIDAK MINI === */
+    max-width: 900px;
+    text-align: center;
 }
 
 .presentation-item h3 {
@@ -356,7 +357,7 @@ footer {
 
 .presentation-embed {
     width: 100%;
-    /* TINGGI BESAR untuk desktop agar sangat mudah dibaca */
+    /* === SOLUSI TINGGI BESAR AGAR TIDAK MINI === */
     height: 550px; 
     border: 1px solid #444;
     border-radius: var(--border-radius);
@@ -370,21 +371,15 @@ footer {
     border: none;
 }
 
-/* Penyesuaian untuk layar yang lebih kecil (mobile) */
+/* Penyesuaian untuk layar mobile agar tetap proporsional */
 @media (max-width: 900px) {
     .presentation-embed {
         height: 450px;
     }
 }
-
 @media (max-width: 600px) {
     .presentation-embed {
         height: 350px;
     }
 }
-@media (max-width: 400px) {
-    .presentation-embed {
-        height: 250px;
-    }
-    }
 }
