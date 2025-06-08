@@ -315,4 +315,58 @@ footer {
     html, body {
     overflow-x: clip; /* Alternatif modern & lebih aman dari 'hidden' */
     }
+
+    /* --- Bagian Presentasi --- */
+#presentasi {
+        background-color: var(--bg-color); /* Latar belakang sama dengan solusi */
+        padding-top: 60px; /* Sedikit padding agar tidak terlalu jauh dari section sebelumnya */
+}
+
+#presentasi p {
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto 50px auto;
+        color: var(--text-secondary-color);
+}
+
+.presentations-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px; /* Jarak antar presentasi */
+        flex-wrap: wrap; /* Akan bertumpuk jika layar terlalu kecil */
+}
+
+.presentation-item {
+        flex: 1; /* Membuat kedua item berbagi ruang secara merata */
+        min-width: 320px; /* Lebar minimum sebelum bertumpuk */
+        max-width: 600px; /* Lebar maksimum per item */
+        text-align: center;
+}
+
+.presentation-item h3 {
+        margin-bottom: 15px;
+        color: var(--primary-color);
+        font-weight: 600;
+}
+
+.presentation-embed {
+        width: 100%;
+        border: 1px solid #333;
+        border-radius: var(--border-radius);
+        overflow: hidden; /* Memastikan iframe tidak keluar dari border-radius */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    
+    /* Trik untuk menjaga rasio aspek 4:3 agar responsif */
+        position: relative;
+        padding-top: 75%; /* (height/width * 100) -> (525/700 * 100) = 75% */
+}
+
+.presentation-embed iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
 }
