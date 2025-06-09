@@ -397,30 +397,48 @@ footer {
 }
     
 /* ================================================== */
-/* BAGIAN JADWAL KONSULTASI (TIDYCAL) */
+/* BAGIAN CALL TO ACTION (JADWALKAN DEMO) */
 /* ================================================== */
 
-#konsultasi {
-    background-color: var(--bg-color); /* Latar belakang gelap agar kontras */
+#jadwalkan-demo {
+    background-color: var(--surface-color); /* Latar belakang yang sedikit berbeda */
     padding: 80px 0;
+    text-align: center; /* <<< SOLUSI UNTUK RATA TENGAH SEMUA TEKS */
 }
 
-#konsultasi p {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 40px auto; /* Jarak bawah sebelum widget */
+#jadwalkan-demo h2 {
+    /* Menggunakan kembali style judul utama agar konsisten */
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+#jadwalkan-demo p {
+    max-width: 700px;
+    margin: 0 auto 40px auto; /* Jarak bawah sebelum tombol */
     color: var(--text-secondary-color);
     font-size: 1.1rem;
     line-height: 1.7;
 }
 
-.booking-widget-container {
-    max-width: 850px; /* Lebar maksimal widget agar tidak terlalu besar */
-    margin: 0 auto; /* Memastikan widget berada di tengah */
-    border-radius: var(--border-radius);
-    overflow: hidden; /* Penting agar TidyCal mengikuti sudut rounded */
-    border: 1px solid #333; /* Bingkai halus */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+.cta-button-large {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 15px 40px; /* Padding lebih besar agar tombolnya menonjol */
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem; /* Ukuran font lebih besar */
+    font-weight: 700; /* Font lebih tebal */
+    text-transform: uppercase; /* Membuat teks menjadi kapital */
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(3, 218, 198, 0.2); /* Bayangan halus */
+}
+
+.cta-button-large:hover {
+    background-color: #ffffff;
+    transform: translateY(-5px); /* Efek terangkat saat disentuh */
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
 }
 
 }
