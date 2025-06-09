@@ -321,20 +321,79 @@ footer {
 /* ================================================== */
 
 /* Memberi latar belakang yang berbeda agar terpisah secara visual */
+/* ================================================== */
+/* SISTEM KARTU UNIVERSAL (SATU UNTUK SEMUA) */
+/* ================================================== */
+
+/* --- Latar Belakang Section --- */
 #solusi-kami {
     background-color: var(--bg-color);
 }
-
 #peralatan {
     background-color: var(--surface-color);
 }
 
-/* Sedikit penyesuaian pada kartu agar lebih fleksibel */
-.cards-container .card {
-    flex-grow: 1; /* Membuat kartu bisa tumbuh mengisi ruang */
-    flex-basis: 300px; /* Lebar dasar kartu sebelum tumbuh */
+/* --- Container untuk Kartu --- */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
+/* --- Gaya Dasar untuk SEMUA Kartu --- */
+.card {
+    background-color: var(--surface-color);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    border: 1px solid #333;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+    /* Menggunakan flexbox untuk ukuran yang fleksibel */
+    display: flex;
+    flex-direction: column;
+    flex-basis: 320px; /* Lebar dasar setiap kartu */
+    flex-grow: 1; /* Biarkan kartu tumbuh mengisi ruang */
+    max-width: 380px; /* Batasi agar tidak terlalu lebar */
+}
 
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-secondary-color);
+    flex-grow: 1; /* Membuat paragraf mengisi ruang vertikal */
+}
+
+.card a {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 25px; /* Memberi jarak dari paragraf */
+}
+
+.card a:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
     
 }
