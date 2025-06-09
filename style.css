@@ -36,20 +36,10 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
-h1 {
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 2.2rem;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.2rem; text-align: center; margin-bottom: 50px; }
+h3 { font-size: 1.4rem; margin-bottom: 15px; }
+p { color: var(--text-secondary-color); }
 
 section {
     padding: 80px 0;
@@ -57,24 +47,19 @@ section {
 
 /* --- Header / Hero --- */
 #hero {
-    background-color: var(--bg-color);
     text-align: center;
     padding: 120px 0;
 }
-
 #hero .subtitle {
     font-size: 1.5rem;
     color: var(--primary-color);
     font-weight: 600;
     margin-bottom: 20px;
 }
-
 #hero p {
     max-width: 700px;
     margin: 0 auto 30px auto;
-    color: var(--text-secondary-color);
 }
-
 .cta-button {
     display: inline-block;
     background-color: var(--primary-color);
@@ -85,7 +70,6 @@ section {
     font-weight: 600;
     transition: background-color 0.3s, transform 0.3s;
 }
-
 .cta-button:hover {
     background-color: #ffffff;
     transform: translateY(-3px);
@@ -95,49 +79,46 @@ section {
 #tentang {
     background-color: var(--surface-color);
 }
-
 #tentang .container p {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
     font-size: 1.1rem;
-    color: var(--text-secondary-color);
 }
 
-/* --- Bagian Solusi (Kartu) --- */
+/* --- Sistem Kartu Universal --- */
+#solusi-kami { background-color: var(--bg-color); }
+#peralatan { background-color: var(--surface-color); }
+
 .cards-container {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
-
 .card {
     background-color: var(--surface-color);
     padding: 30px;
     border-radius: var(--border-radius);
-    width: 320px;
-    text-align: center;
     border: 1px solid #333;
+    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 320px;
+    flex-grow: 1;
+    max-width: 380px;
 }
-
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-
 .card i {
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 20px;
 }
-
-.card p {
-    color: var(--text-secondary-color);
-    margin-bottom: 25px;
-}
-
+.card p { flex-grow: 1; }
 .card a {
     background-color: transparent;
     border: 2px solid var(--primary-color);
@@ -147,8 +128,8 @@ section {
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.3s, color 0.3s;
+    margin-top: 25px;
 }
-
 .card a:hover {
     background-color: var(--primary-color);
     color: var(--bg-color);
@@ -156,59 +137,62 @@ section {
 
 /* --- Bagian Portfolio --- */
 #portfolio {
-    background-color: var(--surface-color);
+    background-color: var(--bg-color);
 }
-
 .portfolio-card-minimalist {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 700px;
-    margin: 40px auto 0 auto;
+    margin: 0 auto;
     padding: 25px 30px;
     background-color: transparent;
-    border: 1px solid #333; /* Border yang sangat halus */
+    border: 1px solid #333;
     border-radius: var(--border-radius);
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
 }
-
 .portfolio-card-minimalist:hover {
     transform: translateY(-5px);
-    border-color: var(--primary-color); /* Border menyala saat disentuh */
-    background-color: rgba(3, 218, 198, 0.05); /* Sedikit cahaya dari warna utama */
+    border-color: var(--primary-color);
+    background-color: rgba(3, 218, 198, 0.05);
 }
-
 .portfolio-content h3 {
     margin-bottom: 5px;
     color: var(--text-color);
     transition: color 0.3s ease;
 }
-
-.portfolio-content p {
-    color: var(--text-secondary-color);
-    margin: 0;
-}
-
-.portfolio-card-minimalist:hover .portfolio-content h3 {
-    color: var(--primary-color); /* Judul berubah warna saat disentuh */
-}
-
+.portfolio-content p { color: var(--text-secondary-color); margin: 0; }
+.portfolio-card-minimalist:hover .portfolio-content h3 { color: var(--primary-color); }
 .cta-arrow {
     font-size: 1.5rem;
     color: var(--text-secondary-color);
     opacity: 0.5;
     transition: all 0.3s ease;
 }
-
 .portfolio-card-minimalist:hover .cta-arrow {
     opacity: 1;
     color: var(--primary-color);
-    transform: translateX(5px); /* Panah bergerak sedikit ke kanan */
+    transform: translateX(5px);
+}
+
+/* --- Bagian Jadwalkan Demo --- */
+#jadwalkan-demo {
+    background-color: var(--surface-color);
+    text-align: center;
+}
+#jadwalkan-demo h2 { margin-bottom: 20px; }
+#jadwalkan-demo p {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
 }
 
 /* --- Bagian Profil --- */
+#profil {
+    background-color: var(--bg-color);
+}
 .profile-container {
     display: flex;
     align-items: center;
@@ -219,7 +203,6 @@ section {
     padding: 40px;
     border-radius: var(--border-radius);
 }
-
 .profile-container img {
     width: 150px;
     height: 150px;
@@ -227,248 +210,48 @@ section {
     object-fit: cover;
     border: 3px solid var(--primary-color);
 }
-
-.profile-text strong {
-    color: var(--primary-color);
-}
-
-.social-links {
-    margin-top: 20px;
-}
-
+.profile-text strong { color: var(--primary-color); }
+.social-links { margin-top: 20px; }
 .social-links a {
     color: var(--text-secondary-color);
     font-size: 1.8rem;
     margin-right: 20px;
     transition: color 0.3s;
 }
-
-.social-links a:hover {
-    color: var(--primary-color);
-}
+.social-links a:hover { color: var(--primary-color); }
 
 /* --- Footer --- */
 footer {
     text-align: center;
     padding: 40px 0;
-    background-color: var(--bg-color);
     border-top: 1px solid #222;
-    color: var(--text-secondary-color);
 }
+
+/* --- Tombol WhatsApp Mengambang --- */
+html, body { overflow-x: clip; }
+.whatsapp-float {
+    position: fixed;
+    width: 60px; height: 60px;
+    bottom: 30px; right: 30px;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 30px;
+    transition: transform 0.3s ease;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
 
 /* --- Media Queries untuk Responsif --- */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
-    }
-    
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    section {
-        padding: 60px 0;
-    }
-
-    .profile-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-container img {
-        margin-bottom: 20px;
-    }
-    
-    /* --- Tombol WhatsApp Mengambang --- */
-    .whatsapp-float {
-    /* --- Posisi & Lapisan --- */
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        z-index: 9999; /* Angka sangat tinggi untuk prioritas utama */
-
-    /* --- Tampilan & Ukuran --- */
-        width: 60px;
-        height: 60px;
-        background-color: #25D366;
-        color: #FFF;
-        border-radius: 50%;
-        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    
-    /* --- Penempatan Ikon di Tengah --- */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    
-    /* --- Animasi & Interaksi --- */
-        text-decoration: none;
-        font-size: 30px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-    .whatsapp-float:hover {
-        transform: scale(1.1) translateY(-5px);
-        box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-    /* Perbaikan untuk elemen position: fixed yang terpotong */
-    html, body {
-    overflow-x: clip; /* Alternatif modern & lebih aman dari 'hidden' */
-    }
-
-    /* ================================================== */
-/* PENYESUAIAN UNTUK BAGIAN SOLUSI & PERALATAN */
-/* ================================================== */
-
-/* Memberi latar belakang yang berbeda agar terpisah secara visual */
-/* ================================================== */
-/* SISTEM KARTU UNIVERSAL (SATU UNTUK SEMUA) */
-/* ================================================== */
-
-/* --- Latar Belakang Section --- */
-#solusi-kami {
-    background-color: var(--bg-color);
-}
-#peralatan {
-    background-color: var(--surface-color);
-}
-
-/* --- Container untuk Kartu --- */
-.cards-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-/* --- Gaya Dasar untuk SEMUA Kartu --- */
-.card {
-    background-color: var(--surface-color);
-    padding: 30px;
-    border-radius: var(--border-radius);
-    border: 1px solid #333;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    
-    /* Menggunakan flexbox untuk ukuran yang fleksibel */
-    display: flex;
-    flex-direction: column;
-    flex-basis: 320px; /* Lebar dasar setiap kartu */
-    flex-grow: 1; /* Biarkan kartu tumbuh mengisi ruang */
-    max-width: 380px; /* Batasi agar tidak terlalu lebar */
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card i {
-    font-size: 3rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-}
-
-.card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: var(--text-secondary-color);
-    flex-grow: 1; /* Membuat paragraf mengisi ruang vertikal */
-}
-
-.card a {
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s, color 0.3s;
-    margin-top: 25px; /* Memberi jarak dari paragraf */
-}
-
-.card a:hover {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-}
-    
-/* ================================================== */
-/* BAGIAN CALL TO ACTION (JADWALKAN DEMO) */
-/* ================================================== */
-
-#jadwalkan-demo {
-    background-color: var(--surface-color); /* Latar belakang yang sedikit berbeda */
-    padding: 80px 0;
-    text-align: center; /* <<< SOLUSI UNTUK RATA TENGAH SEMUA TEKS */
-}
-
-#jadwalkan-demo h2 {
-    /* Menggunakan kembali style judul utama agar konsisten */
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-}
-
-#jadwalkan-demo p {
-    max-width: 700px;
-    margin: 0 auto 40px auto; /* Jarak bawah sebelum tombol */
-    color: var(--text-secondary-color);
-    font-size: 1.1rem;
-    line-height: 1.7;
-}
-.cta-button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #ffffff;
-    transform: translateY(-3px);
-}
-
-
-.cta-button-large:hover {
-    background-color: #ffffff;
-    transform: translateY(-5px); /* Efek terangkat saat disentuh */
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
-}
-
-/* ================================================== */
-/* BAGIAN CALL TO ACTION (JADWALKAN DEMO) */
-/* ================================================== */
-
-#jadwalkan-demo {
-    background-color: var(--surface-color);
-    padding: 80px 0;
-    text-align: center; /* Tetap pertahankan ini untuk teks */
-}
-
-#jadwalkan-demo h2 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-}
-
-#jadwalkan-demo p {
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    color: var(--text-secondary-color);
-    font-size: 1.1rem;
-    line-height: 1.7;
-}
-
-/* --- KODE KUNCI UNTUK MEMBUAT TOMBOL RATA TENGAH --- */
-.cta-container {
-    display: flex;
-    justify-content: center; /* Ini yang akan memusatkan tombol secara horizontal */
-}
-
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.8rem; }
+    section { padding: 60px 0; }
+    .profile-container { flex-direction: column; text-align: center; }
+    .profile-container img { margin-bottom: 20px; }
 }
