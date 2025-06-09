@@ -4,13 +4,13 @@
 ![Last Commit](https://img.shields.io/github/last-commit/nusantaraja/Media-SolusiAI?style=flat-square)
 ![License](https://img.shields.io/github/license/nusantaraja/Media-SolusiAI?style=flat-square)
 
-Selamat datang di repositori resmi **Media Solusi AI**! Ini adalah kode sumber untuk situs web kami yang dapat diakses di [nusantaraja.github.io/Media-SolusiAI/](https://nusantaraja.github.io/Media-SolusiAI/).
+Selamat datang di repositori resmi **Media Solusi AI**! Ini adalah kode sumber untuk situs web kami yang dapat diakses di [https://solusiai.id](https://solusiai.id).
 
 ## 📖 Tentang Proyek
 
 **Media Solusi AI** adalah sebuah platform media dan edukasi yang berfokus pada dunia Kecerdasan Buatan (AI) dan teknologi terkini. Misi kami adalah menyajikan informasi yang mudah dipahami, relevan, dan bermanfaat bagi siapa saja yang tertarik untuk belajar tentang AI, baik pemula maupun praktisi.
 
-🔗 **Kunjungi Situs Web: [https://nusantaraja.github.io/Media-SolusiAI/](https://nusantaraja.github.io/Media-SolusiAI/)**
+🔗 **Kunjungi Situs Web: [https://solusiai.id/](https://solusiai.id/s)**
 
 ## ✨ Fitur Utama
 
