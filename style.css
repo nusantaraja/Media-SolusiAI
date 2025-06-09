@@ -317,67 +317,22 @@ footer {
     }
 
     /* ================================================== */
-    /* BAGIAN SOLUSI UNGGULAN (GRID GAMBAR) */
-    /* ================================================== */
+/* PENYESUAIAN UNTUK BAGIAN SOLUSI & PERALATAN */
+/* ================================================== */
 
-    #solusi-kami {
-        padding: 80px 0;
-        background-color: var(--bg-color);
+/* Memberi latar belakang yang berbeda agar terpisah secara visual */
+#solusi-kami {
+    background-color: var(--bg-color);
 }
 
-    .solutions-grid {
-        display: grid;
-        /* Membuat 2 kolom di desktop */
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 30px; /* Jarak antar item */
+#peralatan {
+    background-color: var(--surface-color);
 }
 
-    .solution-item {
-        background-color: var(--surface-color);
-        border-radius: var(--border-radius);
-        overflow: hidden; /* Penting agar gambar tidak keluar dari sudut rounded */
-        border: 1px solid #333;
-        transition: transform 0.3s, box-shadow 0.3s;
-}
-
-    .solution-item:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-    .solution-item img {
-        width: 100%;
-        height: auto;
-        display: block;
-        aspect-ratio: 16 / 9; /* Membuat gambar proporsional, bisa diubah */
-        object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
-}
-
-    .solution-content {
-        padding: 25px;
-}
-
-    .solution-content h3 {
-        margin-bottom: 10px;
-        color: var(--primary-color);
-}
-
-    .solution-content p {
-        color: var(--text-secondary-color);
-        font-size: 0.95rem;
-}
-
-    /* Mengubah nama section untuk Peralatan */
-    #peralatan {
-        padding: 80px 0;
-        background-color: var(--surface-color);
-}
-
-    /* Penyesuaian untuk Mobile (grid menjadi 1 kolom) */
-    @media (max-width: 768px) {
-    .solutions-grid {
-        grid-template-columns: 1fr;
-    }
+/* Sedikit penyesuaian pada kartu agar lebih fleksibel */
+.cards-container .card {
+    flex-grow: 1; /* Membuat kartu bisa tumbuh mengisi ruang */
+    flex-basis: 300px; /* Lebar dasar kartu sebelum tumbuh */
 }
     
 }
