@@ -10,7 +10,7 @@ Selamat datang di repositori resmi **Media Solusi AI**! Ini adalah kode sumber u
 
 **Media Solusi AI** adalah sebuah platform media dan edukasi yang berfokus pada dunia Kecerdasan Buatan (AI) dan teknologi terkini. Misi kami adalah menyajikan informasi yang mudah dipahami, relevan, dan bermanfaat bagi siapa saja yang tertarik untuk belajar tentang AI, baik pemula maupun praktisi.
 
-🔗 **Kunjungi Situs Web: [https://solusiai.id/](https://solusiai.id/s)**
+🔗 **Kunjungi Situs Web: [https://solusiai.id](https://solusiai.id)**
 
 ## ✨ Fitur Utama
 
