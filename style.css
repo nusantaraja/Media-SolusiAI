@@ -420,21 +420,6 @@ footer {
     line-height: 1.7;
 }
 
-.cta-button-large {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-    padding: 15px 40px; /* Padding lebih besar agar tombolnya menonjol */
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 1.1rem; /* Ukuran font lebih besar */
-    font-weight: 700; /* Font lebih tebal */
-    text-transform: uppercase; /* Membuat teks menjadi kapital */
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(3, 218, 198, 0.2); /* Bayangan halus */
-}
-
 .cta-button-large:hover {
     background-color: #ffffff;
     transform: translateY(-5px); /* Efek terangkat saat disentuh */
