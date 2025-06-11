@@ -139,6 +139,14 @@ section {
 #portfolio {
     background-color: var(--bg-color);
 }
+
+/* === TAMBAHKAN BLOK BARU INI === */
+#portfolio p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
 .portfolio-card-minimalist {
     display: flex;
     justify-content: space-between;
