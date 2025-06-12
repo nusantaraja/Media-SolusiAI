@@ -203,8 +203,11 @@ section {
 }
 .profile-container {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    /* Ubah dari align-items: center menjadi flex-direction: column */
+    flex-direction: column; 
+    align-items: center; /* Ini akan memusatkan semua item secara horizontal */
+    text-align: center; /* <<< TAMBAHKAN BARIS INI */
+    gap: 25px; /* Sedikit mengurangi gap agar lebih pas */
     max-width: 800px;
     margin: 0 auto;
     background-color: var(--surface-color);
