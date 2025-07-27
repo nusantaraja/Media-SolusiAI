@@ -40,12 +40,13 @@ solusiai.id/
 ---
 
 ## 🔗 Link Penting
-| Tujuan | URL |
-|---|---|
+| Tujuan               | URL                                                                                                  |
+| -------------------- | ---------------------------------------------------------------------------------------------------- |
 | Demo 30 menit gratis | [tidycal.com/capricornomics/30-minute-meeting](https://tidycal.com/capricornomics/30-minute-meeting) |
-| WhatsApp langsung | [wa.me/628197618558](https://wa.me/628197618558) |
-| LinkedIn | [linkedin.com/in/iwancahyo](https://www.linkedin.com/in/iwancahyo/) |
-| GitHub | [github.com/nusantaraja](https://github.com/nusantaraja) |
+| WhatsApp langsung    | [wa.me/628197618558](https://wa.me/628197618558)                                                     |
+| LinkedIn             | [linkedin.com/in/iwancahyo](https://www.linkedin.com/in/iwancahyo/)                                  |
+| GitHub               | [github.com/nusantaraja](https://github.com/nusantaraja)                                             |
+
 
 ---
 
