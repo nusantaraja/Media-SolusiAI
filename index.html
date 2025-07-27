@@ -25,7 +25,12 @@
       line-height:1.7;
     }
     .limit{max-width:1100px;margin:0 auto;padding:0 20px}
-    section{padding:80px 20px}
+
+    /* ====== HARMONIOUS SPACING ====== */
+    section{padding:60px 0}
+    #hero{padding:90px 0 70px}
+    /* ====== END SPACING ====== */
+
     h1{font-size:2.8rem;font-weight:700;margin-bottom:.3em}
     h2{font-size:2.2rem;font-weight:600;margin-bottom:.6em;text-align:center}
     h3{font-size:1.3rem;font-weight:600;margin-bottom:.4em}
@@ -40,10 +45,6 @@
       transition:.3s;
     }
     .btn:hover{transform:translateY(-3px)}
-    /* HERO */
-    #hero{text-align:center;padding:120px 20px}
-    #hero p{max-width:600px;margin:0 auto 30px}
-    /* SOLUSI */
     .cards{
       display:grid;
       gap:30px;
@@ -56,19 +57,8 @@
       text-align:center;
       transition:.3s;
     }
-    .card:hover{transform:translateY(-8px)}
+    .card:hover{transform:translateY(-6px)}
     .card i{color:var(--accent);font-size:2.6rem;margin-bottom:15px}
-    /* PORTFOLIO */
-    #portfolio{text-align:center}
-    #portfolio p{max-width:600px;margin:0 auto 30px}
-    /* DEMO */
-    #jadwalkan-demo{background:var(--surface);text-align:center}
-    #jadwalkan-demo p{max-width:600px;margin:0 auto 30px}
-    /* PROFIL */
-    #profil{background:var(--surface)}
-    #profil img{width:120px;border-radius:50%;border:3px solid var(--accent)}
-    .social a{color:var(--muted);font-size:1.8rem;margin:0 10px;transition:.3s}
-    .social a:hover{color:var(--accent)}
     footer{text-align:center;padding:40px 20px;font-size:.875rem;color:var(--muted)}
     .wa{
       position:fixed;
@@ -91,21 +81,28 @@
 
 <body>
 
+<!-- HERO -->
 <header id="hero">
-  <div class="limit">
+  <div class="limit" style="text-align:center">
     <h1>Media Solusi AI</h1>
-    <p>Meningkatkan efisiensi dan engagement melalui teknologi Suara AI yang personal, scalable, dan terukur.</p>
+    <p style="max-width:600px;margin:0 auto 30px">
+      Meningkatkan efisiensi dan engagement melalui teknologi Suara AI yang personal, scalable, dan terukur.
+    </p>
     <a href="#solusi" class="btn">Lihat Solusi</a>
   </div>
 </header>
 
-<section id="tentang">
-  <div class="limit" style="text-align:center">
+<!-- TENTANG -->
+<section id="tentang" style="text-align:center">
+  <div class="limit">
     <h2>Apa itu Media Solusi AI?</h2>
-    <p>Inisiatif di bawah <strong>PT. Ekuitas Media Investama</strong> yang membantu bisnis mengadopsi teknologi Suara AI secara praktis dan terukur—dari rumah sakit hingga pialang berjangka—hingga setiap interaksi pelanggan berjalan lebih efisien.</p>
+    <p style="max-width:720px;margin:0 auto">
+      Inisiatif di bawah <strong>PT. Ekuitas Media Investama</strong> yang membantu bisnis mengadopsi teknologi Suara AI secara praktis dan terukur.
+    </p>
   </div>
 </section>
 
+<!-- SOLUSI -->
 <section id="solusi">
   <div class="limit">
     <h2>Solusi Unggulan</h2>
@@ -120,32 +117,35 @@
   </div>
 </section>
 
-<section id="portfolio">
+<!-- PORTFOLIO -->
+<section id="portfolio" style="text-align:center">
   <div class="limit">
     <h2>Portfolio Suara AI</h2>
-    <p>Dengarkan contoh suara natural & profesional di kanal YouTube kami.</p>
+    <p style="max-width:600px;margin:0 auto 30px">Dengarkan contoh suara natural & profesional di kanal YouTube kami.</p>
     <a href="https://youtu.be/dKJMEV6-X70?si=ig5eMqQYtEoVdIwC" target="_blank" class="btn">Tonton Demo</a>
   </div>
 </section>
 
-<section id="jadwalkan-demo">
+<!-- DEMO -->
+<section id="jadwalkan-demo" style="text-align:center">
   <div class="limit">
     <h2>Siap Mencoba?</h2>
-    <p>Demo 30 menit gratis untuk melihat langsung efeknya di proses Anda.</p>
+    <p style="max-width:600px;margin:0 auto 30px">Demo 30 menit gratis untuk melihat langsung efeknya di proses Anda.</p>
     <a href="https://tidycal.com/capricornomics/30-minute-meeting" target="_blank" class="btn">Jadwalkan Demo</a>
   </div>
 </section>
 
-<section id="profil">
-  <div class="limit" style="text-align:center">
-    <img src="https://solusiai.id/images/EMI.png" alt="PT. Ekuitas Media Investama">
+<!-- PROFIL -->
+<section id="profil" style="text-align:center">
+  <div class="limit">
+    <img src="https://solusiai.id/images/EMI.png" alt="PT. Ekuitas Media Investama" width="120" style="border-radius:50%;border:3px solid var(--accent);margin-bottom:18px">
     <h3>PT. Ekuitas Media Investama</h3>
     <p>Surabaya • Work From Anywhere</p>
     <p>Konsultan teknologi keuangan & inovasi. Tim kami tersebar di seluruh Indonesia, siap memberikan solusi terbaik dari mana saja.</p>
-    <div class="social">
-      <a href="https://www.linkedin.com/in/iwancahyo/" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/nusantaraja" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="mailto:support@solusiai.id"><i class="fas fa-envelope"></i></a>
+    <div style="margin-top:20px">
+      <a href="https://www.linkedin.com/in/iwancahyo/" target="_blank"><i class="fab fa-linkedin" style="font-size:1.7rem;color:var(--muted);margin:0 10px"></i></a>
+      <a href="https://github.com/nusantaraja" target="_blank"><i class="fab fa-github" style="font-size:1.7rem;color:var(--muted);margin:0 10px"></i></a>
+      <a href="mailto:support@solusiai.id"><i class="fas fa-envelope" style="font-size:1.7rem;color:var(--muted);margin:0 10px"></i></a>
     </div>
   </div>
 </section>
