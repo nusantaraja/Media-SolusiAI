@@ -83,6 +83,35 @@
       color: var(--accent);
       font-size: 1.2rem;
     }
+    
+    /* Language Switcher */
+    .language-switcher {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      display: flex;
+      gap: 10px;
+    }
+    .lang-btn {
+      background: var(--surface);
+      color: var(--text);
+      border: 1px solid #333;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .lang-btn:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    .lang-btn.active {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    
     @media(max-width:600px){
       h1{font-size:2.2rem}
       h2{font-size:1.8rem}
@@ -94,11 +123,25 @@
       .laporan-crm i {
         font-size: 1rem;
       }
+      .language-switcher {
+        top: 15px;
+        left: 15px;
+      }
+      .lang-btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
 
 <body>
+
+<!-- Language Switcher -->
+<div class="language-switcher">
+  <button class="lang-btn active" onclick="switchLanguage('id')">ID</button>
+  <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
+</div>
 
 <!-- Laporan CRM Icon -->
 <a href="https://crm-emi-ai-new.vercel.app/" target="_blank" title="Laporan Internal" class="laporan-crm">
@@ -108,15 +151,15 @@
 <!-- HERO -->
 <header id="hero">
   <div class="limit" style="text-align:center">
-    <h1>Media Solusi AI</h1>
-    <p style="max-width:600px;margin:0 auto 30px">
+    <h1 class="lang-content" data-id="media-solusi-ai" data-en="Media Solusi AI">Media Solusi AI</h1>
+    <p class="lang-content" data-id="hero-desc" data-en="Experience conversion increases up to 3×, cut operational costs by 40%, and 24/7 non-stop customer service — all through the power of human-sounding AI Voice." style="max-width:600px;margin:0 auto 30px">
       Rasakan peningkatan konversi hingga 3×, potong biaya operasional 40 %, dan layanan pelanggan 24 jam non-stop — semua lewat kekuatan Suara AI yang terdengar manusiawi.
     </p>
     <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px;">
-      <a href="#solusi" class="btn">Temukan Solusi</a>
-      <a href="https://ai-roi-calculator-hazel.vercel.app/" target="_blank" class="btn" style="background: #03dac6; color: #121212;">Kalkulator AI</a>
+      <a href="#solusi" class="btn lang-content" data-id="discover-solutions" data-en="Discover Solutions">Temukan Solusi</a>
+      <a href="https://ai-roi-calculator-hazel.vercel.app/" target="_blank" class="btn" style="background: #03dac6; color: #121212;" data-id="ai-calculator" data-en="AI Calculator">Kalkulator AI</a>
     </div>
-    <p style="max-width:700px;margin:0 auto;font-size:1.1rem;color:#a0a0a0;">
+    <p class="lang-content" data-id="hero-cta" data-en="Calculate your business ROI potential with our AI Voice Assistant. Don't fall behind the technological changes that could increase your revenue up to 3x!" style="max-width:700px;margin:0 auto;font-size:1.1rem;color:#a0a0a0;">
       Hitung potensi ROI bisnismu dengan AI Voice Assistant kami. <strong>Jangan sampai tertinggal</strong> dari perubahan teknologi yang bisa meningkatkan pendapatanmu hingga 3x!
     </p>
   </div>
@@ -125,8 +168,8 @@
 <!-- TENTANG -->
 <section id="tentang" style="text-align:center">
   <div class="limit">
-    <h2>Kami Membantu Bisnis Berkembang Tanpa Batas</h2>
-    <p style="max-width:720px;margin:0 auto">
+    <h2 class="lang-content" data-id="help-business-grow" data-en="We Help Businesses Grow Without Limits">Kami Membantu Bisnis Berkembang Tanpa Batas</h2>
+    <p class="lang-content" data-id="about-desc" data-en="Behind every call, there is a sales opportunity. Behind every customer question, there is loyalty that can be nurtured. Media Solusi AI — an initiative from <strong>PT. Ekuitas Media Investama</strong> — delivers personalized AI Voice to answer, sell, and maintain customer relationships automatically. Work From Anywhere, real results throughout Indonesia." style="max-width:720px;margin:0 auto">
       Di balik setiap panggilan, ada peluang penjualan. Di balik setiap pertanyaan pelanggan, ada loyalitas yang bisa dipupuk. Media Solusi AI — inisiatif dari <strong>PT. Ekuitas Media Investama</strong> — menghadirkan AI Voice yang dipersonalisasi untuk menjawab, menjual, dan memelihara hubungan pelanggan secara otomatis. Work From Anywhere, hasil nyata di seluruh Indonesia.
     </p>
   </div>
@@ -135,37 +178,37 @@
 <!-- SOLUSI -->
 <section id="solusi">
   <div class="limit">
-    <h2>Apa yang Bisa Kami Lakukan untuk Anda?</h2>
+    <h2 class="lang-content" data-id="what-we-can-do" data-en="What Can We Do for You?">Apa yang Bisa Kami Lakukan untuk Anda?</h2>
     <div class="cards">
       <div class="card">
         <i class="fas fa-headset"></i>
-        <h3>Otomatisasi Panggilan Outbound & Inbound</h3>
-        <p>Luncurkan ribuan panggilan promosi, pengingat janji, atau follow-up otomatis — dengan nada suara yang ramah dan responsif.</p>
+        <h3 class="lang-content" data-id="outbound-inbound" data-en="Outbound & Inbound Call Automation">Otomatisasi Panggilan Outbound & Inbound</h3>
+        <p class="lang-content" data-id="outbound-inbound-desc" data-en="Launch thousands of promotional calls, appointment reminders, or automatic follow-ups — with a friendly and responsive tone of voice.">Luncurkan ribuan panggilan promosi, pengingat janji, atau follow-up otomatis — dengan nada suara yang ramah dan responsif.</p>
       </div>
       <div class="card">
         <i class="fas fa-bullhorn"></i>
-        <h3>Kampanye Telemarketing Super-Targeted</h3>
-        <p>AI kami menganalisis data pelanggan, menentukan waktu terbaik, dan menyampaikan pitch yang dipersonalisasi untuk konversi lebih tinggi.</p>
+        <h3 class="lang-content" data-id="super-targeted" data-en="Super-Targeted Telemarketing Campaigns">Kampanye Telemarketing Super-Targeted</h3>
+        <p class="lang-content" data-id="super-targeted-desc" data-en="Our AI analyzes customer data, determines the best time, and delivers a personalized pitch for higher conversion.">AI kami menganalisis data pelanggan, menentukan waktu terbaik, dan menyampaikan pitch yang dipersonalisasi untuk konversi lebih tinggi.</p>
       </div>
       <div class="card">
         <i class="fas fa-microphone-alt"></i>
-        <h3>Asisten Suara 24/7 di Seketika</h3>
-        <p>Booking, FAQ, tracking order, atau pembayaran — semua terjawab tanpa antrian dan tanpa lembur.</p>
+        <h3 class="lang-content" data-id="voice-assistant" data-en="Instant 24/7 Voice Assistant">Asisten Suara 24/7 di Seketika</h3>
+        <p class="lang-content" data-id="voice-assistant-desc" data-en="Booking, FAQ, order tracking, or payments — all answered without queues and without overtime.">Booking, FAQ, tracking order, atau pembayaran — semua terjawab tanpa antrian dan tanpa lembur.</p>
       </div>
       <div class="card">
         <i class="fas fa-user-shield"></i>
-        <h3>Dukungan Pelanggan Cerdas Tanpa Henti</h3>
-        <p>Turunkan SLA dari jam menjadi detik. Pelanggan senang, tim CS fokus pada kasus prioritas.</p>
+        <h3 class="lang-content" data-id="smart-support" data-en="Smart, Non-Stop Customer Support">Dukungan Pelanggan Cerdas Tanpa Henti</h3>
+        <p class="lang-content" data-id="smart-support-desc" data-en="Reduce SLA from hours to seconds. Customers are happy, CS team focuses on priority cases.">Turunkan SLA dari jam menjadi detik. Pelanggan senang, tim CS fokus pada kasus prioritas.</p>
       </div>
       <div class="card">
         <i class="fas fa-chart-pie"></i>
-        <h3>Analitik Suara Real-Time</h3>
-        <p>Dapatkan insight sentimen, kata kunci, dan performa kampanye langsung di dashboard — siap diekspor untuk rapat manajemen.</p>
+        <h3 class="lang-content" data-id="realtime-analytics" data-en="Real-Time Voice Analytics">Analitik Suara Real-Time</h3>
+        <p class="lang-content" data-id="realtime-analytics-desc" data-en="Get sentiment insights, keywords, and campaign performance directly on the dashboard — ready to export for management meetings.">Dapatkan insight sentimen, kata kunci, dan performa kampanye langsung di dashboard — siap diekspor untuk rapat manajemen.</p>
       </div>
       <div class="card">
         <i class="fas fa-sitemap"></i>
-        <h3>IVR Cerdas Bahasa Natural</h3>
-        <p>Tidak ada lagi “tekan 1 untuk…”. Pelanggan cukup berkata kebutuhannya, sistem otomatis arahkan ke menu atau agen yang tepat.</p>
+        <h3 class="lang-content" data-id="smart-ivr" data-en="Smart Natural Language IVR">IVR Cerdas Bahasa Natural</h3>
+        <p class="lang-content" data-id="smart-ivr-desc" data-en='No more "press 1 for...". Customers just state their needs, the system automatically directs them to the right menu or agent.'>Tidak ada lagi "tekan 1 untuk…". Pelanggan cukup berkata kebutuhannya, sistem otomatis arahkan ke menu atau agen yang tepat.</p>
       </div>
     </div>
   </div>
@@ -174,22 +217,22 @@
 <!-- PORTFOLIO -->
 <section id="portfolio" style="text-align:center">
   <div class="limit">
-    <h2>Dengarkan, Rasakan, Percaya</h2>
-    <p style="max-width:600px;margin:0 auto 30px">
+    <h2 class="lang-content" data-id="listen-feel-trust" data-en="Listen, Feel, Trust">Dengarkan, Rasakan, Percaya</h2>
+    <p class="lang-content" data-id="portfolio-desc" data-en="We have already produced hundreds of hours of audio for e-commerce, health clinics, and logistics companies. Sound quality? 98% of listeners don't realize it's AI." style="max-width:600px;margin:0 auto 30px">
       Kami sudah memproduksi ratusan jam audio untuk e-commerce, klinik kesehatan, hingga perusahaan logistik. Kualitas suara? 98 % pendengar tak menyadari itu AI.
     </p>
-    <a href="https://youtu.be/dKJMEV6-X70?si=ig5eMqQYtEoVdIwC" target="_blank" class="btn">Tonton Demo 90 Detik</a>
+    <a href="https://youtu.be/dKJMEV6-X70?si=ig5eMqQYtEoVdIwC" target="_blank" class="btn lang-content" data-id="watch-90sec-demo" data-en="Watch 90-second Demo">Tonton Demo 90 Detik</a>
   </div>
 </section>
 
 <!-- DEMO -->
 <section id="jadwalkan-demo" style="text-align:center">
   <div class="limit">
-    <h2>Gratis 30 Menit, Tanpa Biaya Tersembunyi</h2>
-    <p style="max-width:600px;margin:0 auto 30px">
+    <h2 class="lang-content" data-id="free-30min" data-en="Free 30 Minutes, No Hidden Fees">Gratis 30 Menit, Tanpa Biaya Tersembunyi</h2>
+    <p class="lang-content" data-id="demo-desc" data-en="We will prepare a live scenario in your business. Flexible scheduling, results visible directly on your screen." style="max-width:600px;margin:0 auto 30px">
       Kami akan menyiapkan skenario langsung di bisnis Anda. Jadwal fleksibel, hasil langsung terlihat di layar Anda.
     </p>
-    <a href="https://tidycal.com/capricornomics/30-minute-meeting" target="_blank" class="btn">Pilih Jadwal Sekarang</a>
+    <a href="https://tidycal.com/capricornomics/30-minute-meeting" target="_blank" class="btn lang-content" data-id="schedule-now" data-en="Schedule Now">Pilih Jadwal Sekarang</a>
   </div>
 </section>
 
@@ -197,9 +240,9 @@
 <section id="profil" style="text-align:center">
   <div class="limit">
     <img src="https://solusiai.id/images/EMI.png" alt="PT. Ekuitas Media Investama" width="120" style="border-radius:50%;border:3px solid var(--accent);margin-bottom:18px">
-    <h3>PT. Ekuitas Media Investama</h3>
-    <p>Surabaya • Work From Anywhere</p>
-    <p>Tim kami terdiri dari engineer AI, data scientist, dan konsultan contact-center yang tersebar di seluruh Indonesia. Satu tujuan: jembatani inovasi terkini dengan kebutuhan nyata bisnis Anda.</p>
+    <h3 class="lang-content" data-id="company-name" data-en="PT. Ekuitas Media Investama">PT. Ekuitas Media Investama</h3>
+    <p class="lang-content" data-id="location-wfa" data-en="Surabaya • Work From Anywhere">Surabaya • Work From Anywhere</p>
+    <p class="lang-content" data-id="team-desc" data-en="Our team consists of AI engineers, data scientists, and contact-center consultants spread throughout Indonesia. One goal: to bridge the latest innovations with your real business needs.">Tim kami terdiri dari engineer AI, data scientist, dan konsultan contact-center yang tersebar di seluruh Indonesia. Satu tujuan: jembatani inovasi terkini dengan kebutuhan nyata bisnis Anda.</p>
     <div style="margin-top:20px">
       <a href="https://www.linkedin.com/in/iwancahyo/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin" style="font-size:1.7rem;color:var(--muted);margin:0 10px"></i></a>
       <a href="https://github.com/nusantaraja" target="_blank" title="GitHub"><i class="fab fa-github" style="font-size:1.7rem;color:var(--muted);margin:0 10px"></i></a>
@@ -209,10 +252,110 @@
 </section>
 
 <footer>
-  <div class="limit">© 2025 Media Solusi AI – Built with ❤️ for business innovation.</div>
+  <div class="limit lang-content" data-id="footer-text" data-en="© 2025 Media Solusi AI – Built with ❤️ for business innovation.">© 2025 Media Solusi AI – Built with ❤️ for business innovation.</div>
 </footer>
 
 <a href="https://wa.me/628197618558" class="wa" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+  // Language translation data
+  const translations = {
+    'en': {
+      'media-solusi-ai': 'Media Solusi AI',
+      'hero-desc': 'Experience conversion increases up to 3×, cut operational costs by 40%, and 24/7 non-stop customer service — all through the power of human-sounding AI Voice.',
+      'discover-solutions': 'Discover Solutions',
+      'ai-calculator': 'AI Calculator',
+      'hero-cta': 'Calculate your business ROI potential with our AI Voice Assistant. Don\'t fall behind the technological changes that could increase your revenue up to 3x!',
+      'help-business-grow': 'We Help Businesses Grow Without Limits',
+      'about-desc': 'Behind every call, there is a sales opportunity. Behind every customer question, there is loyalty that can be nurtured. Media Solusi AI — an initiative from <strong>PT. Ekuitas Media Investama</strong> — delivers personalized AI Voice to answer, sell, and maintain customer relationships automatically. Work From Anywhere, real results throughout Indonesia.',
+      'what-we-can-do': 'What Can We Do for You?',
+      'outbound-inbound': 'Outbound & Inbound Call Automation',
+      'outbound-inbound-desc': 'Launch thousands of promotional calls, appointment reminders, or automatic follow-ups — with a friendly and responsive tone of voice.',
+      'super-targeted': 'Super-Targeted Telemarketing Campaigns',
+      'super-targeted-desc': 'Our AI analyzes customer data, determines the best time, and delivers a personalized pitch for higher conversion.',
+      'voice-assistant': 'Instant 24/7 Voice Assistant',
+      'voice-assistant-desc': 'Booking, FAQ, order tracking, or payments — all answered without queues and without overtime.',
+      'smart-support': 'Smart, Non-Stop Customer Support',
+      'smart-support-desc': 'Reduce SLA from hours to seconds. Customers are happy, CS team focuses on priority cases.',
+      'realtime-analytics': 'Real-Time Voice Analytics',
+      'realtime-analytics-desc': 'Get sentiment insights, keywords, and campaign performance directly on the dashboard — ready to export for management meetings.',
+      'smart-ivr': 'Smart Natural Language IVR',
+      'smart-ivr-desc': 'No more "press 1 for...". Customers just state their needs, the system automatically directs them to the right menu or agent.',
+      'listen-feel-trust': 'Listen, Feel, Trust',
+      'portfolio-desc': 'We have already produced hundreds of hours of audio for e-commerce, health clinics, and logistics companies. Sound quality? 98% of listeners don\'t realize it\'s AI.',
+      'watch-90sec-demo': 'Watch 90-second Demo',
+      'free-30min': 'Free 30 Minutes, No Hidden Fees',
+      'demo-desc': 'We will prepare a live scenario in your business. Flexible scheduling, results visible directly on your screen.',
+      'schedule-now': 'Schedule Now',
+      'company-name': 'PT. Ekuitas Media Investama',
+      'location-wfa': 'Surabaya • Work From Anywhere',
+      'team-desc': 'Our team consists of AI engineers, data scientists, and contact-center consultants spread throughout Indonesia. One goal: to bridge the latest innovations with your real business needs.',
+      'footer-text': '© 2025 Media Solusi AI – Built with ❤️ for business innovation.'
+    }
+  };
+
+  // Function to switch language
+  function switchLanguage(lang) {
+    // Update active button
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    event.target.classList.add('active');
+    
+    // Update content based on selected language
+    if (lang === 'en') {
+      // Update title
+      document.title = "Media Solusi AI – Business Transformation with AI Voice";
+      
+      // Update all translatable content
+      document.querySelectorAll('.lang-content').forEach(element => {
+        const key = element.getAttribute('data-id');
+        if (key && translations.en[key]) {
+          // Store original Indonesian content if not already stored
+          if (!element.hasAttribute('data-original')) {
+            element.setAttribute('data-original', element.innerHTML);
+          }
+          
+          if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+            element.placeholder = translations.en[key];
+          } else {
+            element.innerHTML = translations.en[key];
+          }
+        }
+      });
+    } else {
+      // Update title
+      document.title = "Media Solusi AI – Transformasi Bisnis dengan Suara AI";
+      
+      // Update all translatable content to Indonesian (default)
+      document.querySelectorAll('.lang-content').forEach(element => {
+        // Restore original Indonesian content
+        if (element.hasAttribute('data-original')) {
+          element.innerHTML = element.getAttribute('data-original');
+        }
+      });
+    }
+    
+    // Store selected language in localStorage
+    localStorage.setItem('preferredLanguage', lang);
+  }
+
+  // Initialize language on page load
+  document.addEventListener('DOMContentLoaded', function() {
+    // Store original Indonesian content for all translatable elements
+    document.querySelectorAll('.lang-content').forEach(element => {
+      if (!element.hasAttribute('data-original')) {
+        element.setAttribute('data-original', element.innerHTML);
+      }
+    });
+    
+    const savedLang = localStorage.getItem('preferredLanguage') || 'id';
+    if (savedLang === 'en') {
+      // Find the English button and click it
+      document.querySelectorAll('.lang-btn')[1].click();
+    }
+  });
+</script>
 
 </body>
 </html>
