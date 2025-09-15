@@ -261,47 +261,24 @@
   <div class="limit lang-content" data-id="footer-text" data-en="© 2025 Media Solusi AI – Built with ❤️ for business innovation.">© 2025 Media Solusi AI – Built with ❤️ for business innovation.</div>
 </footer>
 
-<!-- Floating WhatsApp Icon for AI Assistant -->
-<div class="wa" id="aiAssistantToggle" title="AI Assistant">
-  <i class="fab fa-whatsapp"></i>
-</div>
-
-<!-- AI Assistant Widget Popup -->
-<div id="aiAssistantWidget" style="
-  position: fixed;
-  bottom: 100px;
-  right: 24px;
-  width: 350px;
-  height: 500px;
-  border: none;
-  z-index: 10000;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  display: none;
-  overflow: hidden;
-">
-  <iframe
-    src="https://emi-ai-asistant.vercel.app/"
-    style="width: 100%; height: 100%; border: none;"
-    title="EMI AI Assistant"
-  ></iframe>
-  <div id="closeWidget" style="
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: #fff;
-    color: #333;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  ">&times;</div>
-</div>
+<!-- Mulai Kode Widget Chat EMI -->
+<iframe
+  src="https://emi-ai-asistant.vercel.app/"
+  style="
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 420px; /* Lebar maks widget + margin */
+    max-height: 720px; /* Tinggi maks widget + margin */
+    border: none;
+    z-index: 9999;
+    pointer-events: none; /* Sangat penting! Ini agar iframe tidak menghalangi klik pada website Anda. */
+  "
+  title="EMI AI Assistant"
+></iframe>
+<!-- Selesai Kode Widget Chat EMI -->
 
 <script>
   // Language translation data
@@ -400,26 +377,6 @@
       // Find the English button and click it
       document.querySelectorAll('.lang-btn')[1].click();
     }
-    
-    // AI Assistant Widget Functionality
-    const aiAssistantToggle = document.getElementById('aiAssistantToggle');
-    const aiAssistantWidget = document.getElementById('aiAssistantWidget');
-    const closeWidget = document.getElementById('closeWidget');
-    
-    // Toggle widget visibility when WhatsApp icon is clicked
-    aiAssistantToggle.addEventListener('click', function() {
-      if (aiAssistantWidget.style.display === 'none' || !aiAssistantWidget.style.display) {
-        aiAssistantWidget.style.display = 'block';
-      } else {
-        aiAssistantWidget.style.display = 'none';
-      }
-    });
-    
-    // Close widget when close button is clicked
-    closeWidget.addEventListener('click', function(e) {
-      e.stopPropagation();
-      aiAssistantWidget.style.display = 'none';
-    });
   });
 </script>
 
